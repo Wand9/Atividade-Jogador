@@ -1,0 +1,15 @@
+C:\Users\48599214888\Desktop\Jogador\obj\Debug\net7.0\Jogador.csproj.AssemblyReference.cache
+C:\Users\48599214888\Desktop\Jogador\obj\Debug\net7.0\Jogador.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\48599214888\Desktop\Jogador\obj\Debug\net7.0\Jogador.AssemblyInfoInputs.cache
+C:\Users\48599214888\Desktop\Jogador\obj\Debug\net7.0\Jogador.AssemblyInfo.cs
+C:\Users\48599214888\Desktop\Jogador\obj\Debug\net7.0\Jogador.csproj.CoreCompileInputs.cache
+C:\Users\48599214888\Desktop\Jogador\bin\Debug\net7.0\Jogador.exe
+C:\Users\48599214888\Desktop\Jogador\bin\Debug\net7.0\Jogador.deps.json
+C:\Users\48599214888\Desktop\Jogador\bin\Debug\net7.0\Jogador.runtimeconfig.json
+C:\Users\48599214888\Desktop\Jogador\bin\Debug\net7.0\Jogador.dll
+C:\Users\48599214888\Desktop\Jogador\bin\Debug\net7.0\Jogador.pdb
+C:\Users\48599214888\Desktop\Jogador\obj\Debug\net7.0\Jogador.dll
+C:\Users\48599214888\Desktop\Jogador\obj\Debug\net7.0\refint\Jogador.dll
+C:\Users\48599214888\Desktop\Jogador\obj\Debug\net7.0\Jogador.pdb
+C:\Users\48599214888\Desktop\Jogador\obj\Debug\net7.0\Jogador.genruntimeconfig.cache
+C:\Users\48599214888\Desktop\Jogador\obj\Debug\net7.0\ref\Jogador.dll

@@ -5,32 +5,27 @@ using System.Threading.Tasks;
 
 namespace Jogador
 {
-    public class Jogador
+    public abstract class JogadorFutebol
+{
+    public string Nome { get; set; }
+    public DateTime DataNascimento { get; set; }
+    public string Nacionalidade { get; set; }
+    public float Altura { get; set; }
+    public float Peso { get; set; }
+
+    public abstract void ImprimirDados();
+
+    public int CalcularIdade()
     {
-        public string Nome;
-        public DateTime Nascimento;
-        public string Nacionalidade;
-        public int Altura;
-        public int Peso;
-        public string InfoJogador(string Nome, DateTime Nascimento, string Nacionalidade, int Altura, int Peso)
+        DateTime hoje = DateTime.Today;
+        int idade = hoje.Year - DataNascimento.Year;
+        if (hoje < DataNascimento.AddYears(idade))
         {
-            Nome = nome;
-            Nascimento = nascimento;
-            Nacionalidade = nacionalidade;
-            Altura = altura;
-            Peso = peso;
-
-            return@$"
-            Informações do Jogador:
-            Nome: {Nome}
-            Data de nascimento: {Nascimento}
-            Nacionalidade: {Nacionalidade}
-            Altura: {Altura}
-            Peso: {Peso}
-            ";
+            idade--;
         }
-
-        
-
+        return idade;
     }
+
+    public abstract int TempoAteAposentar();
+}
 }
