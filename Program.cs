@@ -10,33 +10,76 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Digite os dados do jogador:");
+        Console.WriteLine(@$"
+        ----------------------------------------
+        |                                      |
+        |   Informe os dados do seu jogador:   |
+        |                                      |
+        ----------------------------------------
+        ");
         Console.Write("Nome: ");
         string nome = Console.ReadLine();
-        Console.Write("Data de Nascimento: ");
+
+        Console.WriteLine("Data de Nascimento: ");
         DateTime dataNascimento = DateTime.Parse(Console.ReadLine());
+
         Console.Write("Nacionalidade: ");
         string nacionalidade = Console.ReadLine();
+
         Console.Write("Altura: ");
         float altura = float.Parse(Console.ReadLine());
+
         Console.Write("Peso: ");
         float peso = float.Parse(Console.ReadLine());
 
-        Jogador.JogadorDefesa jogadorDefesa = new Jogador.JogadorDefesa
+        Console.WriteLine(@$"
+        _______________________________________
+       |                                       |
+       | Informe a posição que o jogador joga: |
+       |_______________________________________|
+
+        ");
+        Console.WriteLine("1. Defesa");
+        Console.WriteLine("2. Ataque");
+        Console.WriteLine("3. Meio-Campo");
+        Console.Write("Opção: ");
+        int opcao = int.Parse(Console.ReadLine());
+
+        Jogador.JogadorFutebol jogador;
+
+        switch (opcao)
         {
-            Nome = nome,
-            DataNascimento = dataNascimento,
-            Nacionalidade = nacionalidade,
-            Altura = altura,
-            Peso = peso,
+            case 1:
+                jogador = new Jogador.JogadorDefesa();
+                break;
+            case 2:
+                jogador = new Jogador.JogadorAtaque();
+                break;
+            case 3:
+                jogador = new Jogador.JogadorMeioCampo();
+                break;
+            default:
+                Console.WriteLine("Opção inválida. Informe um numero de 1 - 3");
+                jogador = new Jogador.JogadorDefesa();
+                break;
+        }
 
-        };
+        jogador.Nome = nome;
+        jogador.DataNascimento = dataNascimento;
+        jogador.Nacionalidade = nacionalidade;
+        jogador.Altura = altura;
+        jogador.Peso = peso;
 
-    Console.WriteLine("Dados do jogador:");
-    jogadorDefesa.ImprimirDados();
-    Console.WriteLine("Idade: " + jogadorDefesa.CalcularIdade());
-    Console.WriteLine("Tempo até se aposentar: " + jogadorDefesa.TempoAteAposentar() + "anos");
+        Console.WriteLine(@$"
+         __________________________
+        |                          |
+        |  DADOS DO SEU JOGADOR:   |
+        |__________________________|
+        ");
+        jogador.ImprimirDados();
+        Console.WriteLine("Idade: " + jogador.CalcularIdade());
+        Console.WriteLine("Tempo até se aposentar: " + jogador.TempoAteAposentar() + " anos");
 
-    Console.ReadLine();
+        Console.ReadLine();
     }
 }
